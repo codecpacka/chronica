@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import BRecordF1 from '../../components/New Records/New Birth Records/NewBirthRecordComp';
+import BRecord from '../../components/New Records/New Birth Records/NewBirthRecordComp';
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -41,7 +41,7 @@ export default function NewBirthRecord() {
 
                 </Grid>
                 <Grid item xs={4}>
-                    <Item> <BRecordF1 /> </Item>
+                    <Item> <BRecord /> </Item>
                 </Grid>
             </Grid>
         </Box>
