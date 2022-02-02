@@ -210,7 +210,7 @@ const BRecord = () => {
   }
   return (
     <>
-      <div>{formDisplay()}</div>
+      {formDisplay()}
       <div>
       <Stack spacing={2} direction="row">
         <Button variant="outlined" size="small" onClick={() => { setPage((page) => page -1) }}disabled={page==0}>Previous</Button>
