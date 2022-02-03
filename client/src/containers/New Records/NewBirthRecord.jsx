@@ -5,6 +5,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import BRecord from '../../components/New Records/New Birth Records/NewBirthRecordComp';
 import DocumentList from '../../components/New Records/New Birth Records/DocumentList'
+import ImageExplorer from '../../components/New Records/New Birth Records/ImageExplorer'
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -25,7 +26,7 @@ export default function NewBirthRecord() {
                     </Grid>
 
                     <Grid item xs={3}>
-                        <Item>xs=3</Item>
+                        <Item><ImageExplorer/></Item>
                     </Grid>
 
                     <Grid item xs={9} container direction="column" style={{display: "table"}}>
