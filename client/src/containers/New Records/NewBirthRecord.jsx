@@ -6,13 +6,16 @@ import Grid from '@mui/material/Grid';
 import BRecord from '../../components/New Records/New Birth Records/NewBirthRecordComp';
 import DocumentList from '../../components/New Records/New Birth Records/DocumentList'
 import ImageExplorer from '../../components/New Records/New Birth Records/ImageExplorer'
+import IconBar from '../../components/New Records/New Birth Records/IconBar'
+import ImageWindow from '../../components/New Records/New Birth Records/ImageWindow'
+import ZoneOffsets from '../../components/New Records/New Birth Records/ZoneOffsets';
+
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     padding: theme.spacing(0.5),
     // textAlign: 'center',
     color: theme.palette.text.secondary,
-    display:"",
 }));
 
 export default function NewBirthRecord() {
@@ -31,14 +34,14 @@ export default function NewBirthRecord() {
 
                     <Grid item xs={9} container direction="column" style={{display: "table"}}>
                         {/* <Item>xs = 9</Item> */}
-                        <Grid item xs={2} style={{display: "inline-flex"}}>
-                            <Item>xs=2</Item>
+                        <Grid item xs={2}>
+                            <Item><IconBar /></Item>
                         </Grid>
-                        <Grid item xs={4} style={{display: "inline-flex"}}>
-                            <Item>xs=8</Item>
+                        <Grid item xs={8}>
+                            <Item><ImageWindow /></Item>
                         </Grid>
-                        <Grid item xs={2} style={{display: "inline-flex"}}>
-                            <Item>xs=2</Item>
+                        <Grid item xs={2}>
+                            <Item><ZoneOffsets /></Item>
                         </Grid>
                     </Grid>
 
