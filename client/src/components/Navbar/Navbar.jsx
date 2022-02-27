@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Navitems = (props) => {
   return (
@@ -13,55 +13,128 @@ const Navitems = (props) => {
         {props.NavTitle}
       </span>
       <ul className="dropdown-menu">
-        <Link to="/newbirthrecord">
-        <li style={{ listStyleType: "none" }}>
-          <span className="dropdown-item" style={{ textDecoration: "none" }}>
-            {props.dropdown1}
-          </span>
-        </li>
-        </Link>
-        <Link to="/newdeathRecord">
-        <li>
-          <span className="dropdown-item">{props.dropdown2}</span>
-        </li>
-        </Link>
-        <li>
-          <span className="dropdown-item">{props.dropdown3}</span>
-        </li>
-        {/* <li><hr className="dropdown-divider" /></li> */}
-        <Link to="/AssociateImage">
-        <li>
-          <span className="dropdown-item">{props.dropdown4}</span>
-            
-        </li>
-        </Link>
-        <li>
-          <span className="dropdown-item">{props.dropdown5}</span>
-        </li>
-        <li>
-          <span className="dropdown-item">{props.dropdown6}</span>
-        </li>
-        <li>
-          <span className="dropdown-item">{props.dropdown7}</span>
-        </li>
-        <li>
-          <span className="dropdown-item">{props.dropdown8}</span>
-        </li>
-        <li>
-          <span className="dropdown-item">{props.dropdown9}</span>
-        </li>
-        <li>
-          <span className="dropdown-item">{props.dropdown10}</span>
-        </li>
-        <li>
-          <span className="dropdown-item">{props.dropdown11}</span>
-        </li>
-        <li>
-          <span className="dropdown-item">{props.dropdown12}</span>
-        </li>
-        <li>
-          <span className="dropdown-item">{props.dropdown13}</span>
-        </li>
+        {(() => {
+          const list = [];
+          if (props.dropdown1) {
+            list.push(
+              <Link to="/newbirthrecord">
+                <li style={{ listStyleType: "none" }}>
+                  <span
+                    className="dropdown-item"
+                    style={{ textDecoration: "none" }}
+                  >
+                    {props.dropdown1}
+                  </span>
+                </li>
+              </Link>
+            );
+          } 
+          if (props.dropdown2) {
+            list.push(
+              <Link to="/newdeathrecord">
+                <li>
+                  <span className="dropdown-item">{props.dropdown2}</span>
+                </li>
+              </Link>
+            );
+          } 
+          if (props.dropdown3) {
+            list.push(
+              <Link to="/fetaldeath">
+                <li>
+                  <span className="dropdown-item">{props.dropdown3}</span>
+                </li>
+              </Link>
+            );
+          }
+          if (props.dropdown4) {
+            list.push(
+              <Link to="/associateimage">
+                <li>
+                  <span className="dropdown-item">{props.dropdown4}</span>
+                </li>
+              </Link>
+            );
+          }  
+          if (props.dropdown5) {
+            list.push(
+              <Link to="">
+                <li>
+                  <span className="dropdown-item">{props.dropdown5}</span>
+                </li>
+              </Link>
+            );
+          } 
+          if (props.dropdown6) {
+            list.push(
+              <Link to="">
+                <li>
+                  <span className="dropdown-item">{props.dropdown6}</span>
+                </li>
+              </Link>
+            );
+          } 
+          if (props.dropdown7) {
+            list.push(
+              <Link to="">
+                <li>
+                  <span className="dropdown-item">{props.dropdown7}</span>
+                </li>
+              </Link>
+            );
+          } if (props.dropdown8) {
+            list.push(
+              <Link to="">
+                <li>
+                  <span className="dropdown-item">{props.dropdown8}</span>
+                </li>
+              </Link>
+            );
+          } if (props.dropdown9) {
+            list.push(
+              <Link to="">
+                <li>
+                  <span className="dropdown-item">{props.dropdown9}</span>
+                </li>
+              </Link>
+            );
+          } if (props.dropdown10) {
+            list.push(
+              <Link to="">
+                <li>
+                  <span className="dropdown-item">{props.dropdown10}</span>
+                </li>
+              </Link>
+            );
+          } if (props.dropdown11) {
+            list.push(
+              <Link to="">
+                <li>
+                  <span className="dropdown-item">{props.dropdown11}</span>
+                </li>
+              </Link>
+            );
+          } if (props.dropdown12) {
+            list.push(
+              <Link to="">
+                <li>
+                  <span className="dropdown-item">{props.dropdown12}</span>
+                </li>
+              </Link>
+            );
+          } if (props.dropdown13) {
+            list.push(
+              <Link to="">
+                <li>
+                  <span className="dropdown-item">{props.dropdown13}</span>
+                </li>
+              </Link>
+            );
+          } 
+          
+          
+          return list;
+        })()}
       </ul>
     </li>
   );
@@ -72,7 +145,7 @@ const Navbar = () => {
       <ul nav nav-tabs style={{ listStyleType: "none" }}>
         <Navitems
           NavTitle="Import Data"
-          dropdown1="Process Hospital Data"
+          //   dropdown1="Process Hospital Data"
           dropdown2="Assimilate Data"
           dropdown3="Unassimilated Date filed Search"
           dropdown4="Import State Birth data"

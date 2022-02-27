@@ -17,8 +17,8 @@ function App() {
         {/* <Route path="/" element={<NewBirthRecord />} /> */}
         <Route path="/newbirthrecord" element={<NewBirthRecord />} />
         <Route path="/newdeathrecord" element={<NewDeathRecord />} />
-        <Route path="/associateimage" element={<AssociateImage />} />
         <Route path="/fetaldeath" element={<NFDRecord />} />
+        <Route path="/associateimage" element={<AssociateImage />} />
       </Routes>
     </>
   );
