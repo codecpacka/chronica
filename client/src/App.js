@@ -4,6 +4,7 @@ import React from "react";
 import NewBirthRecord from "./containers/New Records/NewBirthRecord";
 import NewDeathRecord from "./containers/New Records/NewDeathRecord";
 import AssociateImage from "./containers/New Records/AssociateImage";
+import NFDRecord from "./containers/New Records/NewFetalDeath";
 // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/newbirthrecord" element={<NewBirthRecord />} />
         <Route path="/newdeathrecord" element={<NewDeathRecord />} />
         <Route path="/associateimage" element={<AssociateImage />} />
+        <Route path="/fetaldeath" element={<NFDRecord />} />
       </Routes>
     </>
   );
